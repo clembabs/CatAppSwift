@@ -31,6 +31,7 @@ class BreedFetcher: ObservableObject {
                     print(error)
                 case .success(let breeds):
                     self.breeds = breeds
+                    print(breeds.first?.image?.url)
                 }
             }
         }
