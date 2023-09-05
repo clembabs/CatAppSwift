@@ -6,12 +6,19 @@
 //
 
 import SwiftUI
+import Firebase
 
 @main
 struct cat_appApp: App {
+    @StateObject var authRepository = AuthRepository()
+    
+    init() {
+        //Call firebase on load
+        FirebaseApp.configure()
+    }
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView().environmentObject(authRepository)
         }
     }
 }

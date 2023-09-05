@@ -12,6 +12,7 @@ struct SignUpView: View {
     @State private var fullName = ""
     @State private var password = ""
     @State private var confirmPassword = ""
+    @EnvironmentObject var authRepository : AuthRepository
     @Environment(\.dismiss) var dismiss
     var body: some View {
         NavigationStack {
@@ -32,7 +33,9 @@ struct SignUpView: View {
                     
                     //Sign in button
                     Button {
-                       
+                        Task {
+                            try await authRepository.createUser(withEmail:email, password: password,fullName: fullName)
+                        }
                     }label: {
                         HStack {
                             Text("Sign Up").fontWeight(.semibold)

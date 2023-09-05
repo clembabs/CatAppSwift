@@ -10,6 +10,7 @@ import SwiftUI
 struct LoginView: View {
     @State private var email = ""
     @State private var password = ""
+    @EnvironmentObject var authRepository : AuthRepository
     var body: some View {
         NavigationStack {
             VStack {
@@ -26,7 +27,9 @@ struct LoginView: View {
                 
                 //Sign in button
                 Button {
-                    print("Log user in ...")
+                    Task {
+                        try await authRepository.signIn(withEmail:email, password: password)
+                    }
                 }label: {
                     HStack {
                         Text("Sign In").fontWeight(.semibold)

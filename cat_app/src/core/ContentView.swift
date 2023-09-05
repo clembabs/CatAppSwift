@@ -8,14 +8,29 @@
 import SwiftUI
 
 struct ContentView: View {
+    @EnvironmentObject var authRepository : AuthRepository
     @StateObject var breedFetcher = BreedFetcher()
+    
+//    init() {
+//           // Initialize breedFetcher only when userSession is not nil
+//           if authRepository.userSession != nil {
+//               _breedFetcher = StateObject(wrappedValue: BreedFetcher())
+//           }
+//       }
+       
     var body: some View { 
-        if breedFetcher.isLoaading {
-            LoadingView()
-        } else if breedFetcher.errorMessage != nil {
-            ErrorView(breedFetcher: breedFetcher)
-        } else {
-            BreedListView(breeds: breedFetcher.breeds)
+        Group {
+            if authRepository.userSession != nil {
+                if breedFetcher.isLoaading {
+                    LoadingView()
+                } else if breedFetcher.errorMessage != nil {
+                    ErrorView(breedFetcher: breedFetcher)
+                } else {
+                    BreedListView(breeds: breedFetcher.breeds)
+                }
+            } else {
+                LoginView()
+            }
         }
         
     }
