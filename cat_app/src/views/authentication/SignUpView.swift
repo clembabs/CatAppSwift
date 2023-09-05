@@ -27,7 +27,23 @@ struct SignUpView: View {
                         InputView(text: $email, title: "Email", placeholder: "name@example.com").autocapitalization(.none)
                         InputView(text: $fullName, title: "Full Name", placeholder: "Enter your full name")
                         InputView(text: $password, title: "Password", placeholder: "Enter your password",isSecure: true)
-                        InputView(text: $confirmPassword, title: "Confirm Password", placeholder: "Confirm your password",isSecure: true)
+                        ZStack(alignment: .trailing) {
+                            InputView(text: $confirmPassword, title: "Confirm Password", placeholder: "Confirm your password",isSecure: true)
+                            
+                            if !password.isEmpty && !confirmPassword.isEmpty {
+                                if password == confirmPassword {
+                                    Image(systemName: "checkmark.circle.fill")
+                                        .imageScale(.large)
+                                        .fontWeight(.bold)
+                                        .foregroundColor(Color(.systemGreen))
+                                } else {
+                                    Image(systemName: "xmark.circle.fill")
+                                        .imageScale(.large)
+                                        .fontWeight(.bold)
+                                        .foregroundColor(Color(.systemRed))
+                                }
+                            }
+                        }
                     }.padding(.horizontal)
                         .padding(.top, 32)
                     
@@ -42,6 +58,8 @@ struct SignUpView: View {
                             Image(systemName: "arrow.right")
                         }.foregroundColor(.white).frame(width: UIScreen.main.bounds.width - 32,height: 48)
                     }.background(Color(.systemBlue)).cornerRadius(10).padding(.vertical, 24)
+                        .disabled(!formIsValid)
+                        .opacity(formIsValid ? 1.0 : 0.5)
                      
                    
                     Spacer()
@@ -58,6 +76,16 @@ struct SignUpView: View {
                 }
             }
         }
+    }
+}
+
+extension SignUpView: AuthFormProtocol {
+    var formIsValid: Bool {
+        return !email.isEmpty && email.contains("@")
+        && !password.isEmpty
+        && password.count > 5
+        && !fullName.isEmpty
+        && confirmPassword == password
     }
 }
 

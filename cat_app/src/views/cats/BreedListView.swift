@@ -22,18 +22,39 @@ struct BreedListView: View {
     }
     var body: some View {
         NavigationView {
-            List {
-                ForEach(filteredBreeds) { breed in
+           
+        
+               
+                List {
                     NavigationLink {
-                        BreedDetailView(breed: breed)
+                        ProfileView()
                     } label: {
-                        BreedRow(breed: breed)
+                        HStack {
+                           
+                                Image(systemName: "person.crop.circle.fill")
+                                    .imageScale(.large)
+                                    .fontWeight(.bold)
+                                    .foregroundColor(Color(.systemGray2))
+                               
+                                Text("Profile")
+                                    .font(.subheadline)
+                                    .fontWeight(.semibold)
+                                    .padding(.top,4)
+                        
+                        }
                     }
-                }
-            }.listStyle(PlainListStyle())
-                .navigationTitle("Find Your Desired Cat")
-                .searchable(text: $searchText)
-        }
+                    ForEach(filteredBreeds) { breed in
+                        NavigationLink {
+                            BreedDetailView(breed: breed)
+                        } label: {
+                            BreedRow(breed: breed)
+                        }
+                    }
+                }.listStyle(PlainListStyle())
+                    .navigationTitle("Find Your Desired Cat")
+                    .searchable(text: $searchText)
+            }
+    
         
     }
 }

@@ -7,7 +7,7 @@
 
 import Foundation
 
-
+//Codable takes incoming raw json data and maps it to a dataobject
 struct AppUser: Identifiable, Codable {
     let id: String
     let fullname: String
