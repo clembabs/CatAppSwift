@@ -7,10 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B50E4DA12A9E12E90006D604 /* viewmodel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50E4DA02A9E12E90006D604 /* viewmodel.swift */; };
 		B50E4DA72A9E46950006D604 /* cat_breed.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50E4DA62A9E46950006D604 /* cat_breed.swift */; };
 		B50E4DA92A9E46F10006D604 /* cat_breed_image.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50E4DA82A9E46F10006D604 /* cat_breed_image.swift */; };
 		B50E4DAB2A9E47340006D604 /* breed_repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50E4DAA2A9E47340006D604 /* breed_repository.swift */; };
+		B52659B12AA5E469004FC4CD /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52659B02AA5E469004FC4CD /* LoginView.swift */; };
+		B52659B42AA5F955004FC4CD /* InputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52659B32AA5F955004FC4CD /* InputView.swift */; };
+		B52659B62AA6A95B004FC4CD /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52659B52AA6A95B004FC4CD /* SignUpView.swift */; };
+		B52659B92AA6AE49004FC4CD /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52659B82AA6AE49004FC4CD /* ProfileView.swift */; };
+		B52659BB2AA6B12B004FC4CD /* SettingsRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52659BA2AA6B12B004FC4CD /* SettingsRow.swift */; };
+		B52659C02AA6B539004FC4CD /* AppUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52659BF2AA6B539004FC4CD /* AppUser.swift */; };
 		B57E75552AA36263008F21B9 /* api_mock_service.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57E75542AA36263008F21B9 /* api_mock_service.swift */; };
 		B57E75572AA362B8008F21B9 /* api_service_protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57E75562AA362B8008F21B9 /* api_service_protocol.swift */; };
 		B58797362A9F801D00E186C9 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58797352A9F801D00E186C9 /* ErrorView.swift */; };
@@ -47,10 +52,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		B50E4DA02A9E12E90006D604 /* viewmodel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = viewmodel.swift; sourceTree = "<group>"; };
 		B50E4DA62A9E46950006D604 /* cat_breed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cat_breed.swift; sourceTree = "<group>"; };
 		B50E4DA82A9E46F10006D604 /* cat_breed_image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cat_breed_image.swift; sourceTree = "<group>"; };
 		B50E4DAA2A9E47340006D604 /* breed_repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = breed_repository.swift; sourceTree = "<group>"; };
+		B52659B02AA5E469004FC4CD /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		B52659B32AA5F955004FC4CD /* InputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputView.swift; sourceTree = "<group>"; };
+		B52659B52AA6A95B004FC4CD /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		B52659B82AA6AE49004FC4CD /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		B52659BA2AA6B12B004FC4CD /* SettingsRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsRow.swift; sourceTree = "<group>"; };
+		B52659BF2AA6B539004FC4CD /* AppUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUser.swift; sourceTree = "<group>"; };
 		B57E75542AA36263008F21B9 /* api_mock_service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = api_mock_service.swift; sourceTree = "<group>"; };
 		B57E75562AA362B8008F21B9 /* api_service_protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = api_service_protocol.swift; sourceTree = "<group>"; };
 		B58797352A9F801D00E186C9 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
@@ -100,6 +110,8 @@
 		B50E4DA22A9E46070006D604 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				B52659AF2AA5E189004FC4CD /* core */,
+				B52659AE2AA5E14C004FC4CD /* app */,
 				B587973B2A9F8DC700E186C9 /* services */,
 				B50E4DA52A9E462B0006D604 /* repository */,
 				B50E4DA42A9E46200006D604 /* views */,
@@ -111,8 +123,8 @@
 		B50E4DA32A9E46160006D604 /* models */ = {
 			isa = PBXGroup;
 			children = (
-				B50E4DA62A9E46950006D604 /* cat_breed.swift */,
-				B50E4DA82A9E46F10006D604 /* cat_breed_image.swift */,
+				B52659BE2AA6B52A004FC4CD /* user */,
+				B52659BC2AA6B4FC004FC4CD /* catmodel */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -120,11 +132,11 @@
 		B50E4DA42A9E46200006D604 /* views */ = {
 			isa = PBXGroup;
 			children = (
+				B52659B72AA6AE29004FC4CD /* profile */,
+				B52659B22AA5E481004FC4CD /* components */,
+				B52659AA2AA5DF8B004FC4CD /* authentication */,
+				B52659AB2AA5DF94004FC4CD /* cats */,
 				B58797402AA0694600E186C9 /* utils */,
-				B58797352A9F801D00E186C9 /* ErrorView.swift */,
-				B58797372A9F802D00E186C9 /* LoadingView.swift */,
-				B58797392A9F803C00E186C9 /* BreedListView.swift */,
-				B58797432AA083E300E186C9 /* BreedDetailView.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -132,9 +144,94 @@
 		B50E4DA52A9E462B0006D604 /* repository */ = {
 			isa = PBXGroup;
 			children = (
-				B50E4DAA2A9E47340006D604 /* breed_repository.swift */,
+				B52659AD2AA5DFCB004FC4CD /* breed */,
+				B52659AC2AA5DFC3004FC4CD /* authentication */,
 			);
 			path = repository;
+			sourceTree = "<group>";
+		};
+		B52659AA2AA5DF8B004FC4CD /* authentication */ = {
+			isa = PBXGroup;
+			children = (
+				B52659B32AA5F955004FC4CD /* InputView.swift */,
+				B52659B02AA5E469004FC4CD /* LoginView.swift */,
+				B52659B52AA6A95B004FC4CD /* SignUpView.swift */,
+			);
+			path = authentication;
+			sourceTree = "<group>";
+		};
+		B52659AB2AA5DF94004FC4CD /* cats */ = {
+			isa = PBXGroup;
+			children = (
+				B58797392A9F803C00E186C9 /* BreedListView.swift */,
+				B58797432AA083E300E186C9 /* BreedDetailView.swift */,
+			);
+			path = cats;
+			sourceTree = "<group>";
+		};
+		B52659AC2AA5DFC3004FC4CD /* authentication */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = authentication;
+			sourceTree = "<group>";
+		};
+		B52659AD2AA5DFCB004FC4CD /* breed */ = {
+			isa = PBXGroup;
+			children = (
+				B50E4DAA2A9E47340006D604 /* breed_repository.swift */,
+			);
+			path = breed;
+			sourceTree = "<group>";
+		};
+		B52659AE2AA5E14C004FC4CD /* app */ = {
+			isa = PBXGroup;
+			children = (
+				B5F05C5D2A9D6A5C00719B0C /* cat_appApp.swift */,
+			);
+			path = app;
+			sourceTree = "<group>";
+		};
+		B52659AF2AA5E189004FC4CD /* core */ = {
+			isa = PBXGroup;
+			children = (
+				B5F05C5F2A9D6A5C00719B0C /* ContentView.swift */,
+			);
+			path = core;
+			sourceTree = "<group>";
+		};
+		B52659B22AA5E481004FC4CD /* components */ = {
+			isa = PBXGroup;
+			children = (
+				B58797412AA0696E00E186C9 /* breed_row.swift */,
+				B52659BA2AA6B12B004FC4CD /* SettingsRow.swift */,
+			);
+			path = components;
+			sourceTree = "<group>";
+		};
+		B52659B72AA6AE29004FC4CD /* profile */ = {
+			isa = PBXGroup;
+			children = (
+				B52659B82AA6AE49004FC4CD /* ProfileView.swift */,
+			);
+			path = profile;
+			sourceTree = "<group>";
+		};
+		B52659BC2AA6B4FC004FC4CD /* catmodel */ = {
+			isa = PBXGroup;
+			children = (
+				B50E4DA62A9E46950006D604 /* cat_breed.swift */,
+				B50E4DA82A9E46F10006D604 /* cat_breed_image.swift */,
+			);
+			path = catmodel;
+			sourceTree = "<group>";
+		};
+		B52659BE2AA6B52A004FC4CD /* user */ = {
+			isa = PBXGroup;
+			children = (
+				B52659BF2AA6B539004FC4CD /* AppUser.swift */,
+			);
+			path = user;
 			sourceTree = "<group>";
 		};
 		B587973B2A9F8DC700E186C9 /* services */ = {
@@ -151,7 +248,8 @@
 		B58797402AA0694600E186C9 /* utils */ = {
 			isa = PBXGroup;
 			children = (
-				B58797412AA0696E00E186C9 /* breed_row.swift */,
+				B58797352A9F801D00E186C9 /* ErrorView.swift */,
+				B58797372A9F802D00E186C9 /* LoadingView.swift */,
 			);
 			path = utils;
 			sourceTree = "<group>";
@@ -180,11 +278,8 @@
 			isa = PBXGroup;
 			children = (
 				B50E4DA22A9E46070006D604 /* src */,
-				B5F05C5D2A9D6A5C00719B0C /* cat_appApp.swift */,
-				B5F05C5F2A9D6A5C00719B0C /* ContentView.swift */,
 				B5F05C612A9D6A5D00719B0C /* Assets.xcassets */,
 				B5F05C632A9D6A5D00719B0C /* Preview Content */,
-				B50E4DA02A9E12E90006D604 /* viewmodel.swift */,
 			);
 			path = cat_app;
 			sourceTree = "<group>";
@@ -346,16 +441,21 @@
 			files = (
 				B5F05C602A9D6A5C00719B0C /* ContentView.swift in Sources */,
 				B587973D2A9F8DE200E186C9 /* api_error.swift in Sources */,
+				B52659BB2AA6B12B004FC4CD /* SettingsRow.swift in Sources */,
 				B5F05C5E2A9D6A5C00719B0C /* cat_appApp.swift in Sources */,
+				B52659B12AA5E469004FC4CD /* LoginView.swift in Sources */,
 				B50E4DAB2A9E47340006D604 /* breed_repository.swift in Sources */,
-				B50E4DA12A9E12E90006D604 /* viewmodel.swift in Sources */,
+				B52659B42AA5F955004FC4CD /* InputView.swift in Sources */,
 				B58797362A9F801D00E186C9 /* ErrorView.swift in Sources */,
 				B587973A2A9F803C00E186C9 /* BreedListView.swift in Sources */,
 				B58797422AA0696E00E186C9 /* breed_row.swift in Sources */,
 				B57E75552AA36263008F21B9 /* api_mock_service.swift in Sources */,
+				B52659B92AA6AE49004FC4CD /* ProfileView.swift in Sources */,
 				B58797382A9F802D00E186C9 /* LoadingView.swift in Sources */,
 				B50E4DA92A9E46F10006D604 /* cat_breed_image.swift in Sources */,
+				B52659B62AA6A95B004FC4CD /* SignUpView.swift in Sources */,
 				B58797442AA083E300E186C9 /* BreedDetailView.swift in Sources */,
+				B52659C02AA6B539004FC4CD /* AppUser.swift in Sources */,
 				B587973F2A9F9CEC00E186C9 /* api_service.swift in Sources */,
 				B50E4DA72A9E46950006D604 /* cat_breed.swift in Sources */,
 				B57E75572AA362B8008F21B9 /* api_service_protocol.swift in Sources */,
@@ -529,7 +629,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.cat-app.app.cat-app";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cat-app.app";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -557,7 +657,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.cat-app.app.cat-app";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cat-app.app";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
